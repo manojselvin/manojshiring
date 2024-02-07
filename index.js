@@ -64,6 +64,11 @@ app.put('/candidates', async (req, res) => {
     res.status(200).json({ message: 'Candidate updated successfully' });
 });
 
+// API Health Status
+app.get('/', (req, res) => {
+  res.json({name: "Manojs Hiring Backend Server!", status: "API's are working fine"});
+});
+
 app.listen(port, () => {
     console.log(`Backend server listening at http://localhost:${port}`);
 });
